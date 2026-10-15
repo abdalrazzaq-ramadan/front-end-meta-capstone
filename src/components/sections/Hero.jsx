@@ -1,15 +1,26 @@
 import Container from "../Container.jsx"
 import Button from "../Button.jsx"
-export default function Hero () {
+import logo from "../../assets/icons_assets/restauranfood.jpg";
+export default function Hero() {
     return (
-        <section id="hero">
-            <Container>
-                <h1 className="font-heading text-subtitle text-primary">Little Lemon</h1>
-                <h2 className="text-lead text-primary">chicago</h2>
+        <section id="hero" className="bg-primary">
+            <Container className="grid grid-cols-2 gap-72 items-center">
+                <div className="content">
 
-                <p className="font-body text-body text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, id. Ullam itaque vero nemo magnam quod, doloribus consequuntur facilis, ad odio sed tempore, sunt ipsum. Saepe sed accusamus ullam praesentium.</p>
+                    <h1 className="font-heading text-subtitle text-secondary">Little Lemon</h1>
+                    <h2 className="text-lead text-surface mb-2">chicago</h2>
 
-                <Button className = "rounded-button bg-primary">Reserve a Table</Button>
+                    <p className="font-body text-body text-surface">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, id. Ullam itaque vero nemo magnam quod, doloribus consequuntur facilis, ad odio sed tempore, sunt ipsum. Saepe sed accusamus ullam praesentium.</p>
+
+                    <div className="action my-2.5">
+                        <Button className="">Reserve a Table</Button>
+                    </div>
+                    
+                </div>
+
+                <figure className="grid items-center overflow-hidden p-2.5">
+                    <img src = {logo} alt="restaurant" className="rounded-card object-cover h-72 w-full "/>
+                </figure>
             </Container>
         </section>
     )

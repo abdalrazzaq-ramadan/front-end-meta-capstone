@@ -1,5 +1,7 @@
 const Button = ({children}) => {
     return(
-        <button className="bg-primary rounded-b-button ">{children}</button>
+        <button className="bg-secondary rounded-button cursor-pointer p-2">{children}</button>
     )
 }
+
+export default Button ;
