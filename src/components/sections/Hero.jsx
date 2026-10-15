@@ -3,7 +3,7 @@ import Button from "../Button.jsx"
 import logo from "../../assets/icons_assets/restauranfood.jpg";
 export default function Hero() {
     return (
-        <section id="hero" className="bg-primary">
+        <section id="hero" className="bg-primary py-24">
             <Container className="grid grid-cols-2 gap-72 items-center">
                 <div className="content">
 
@@ -18,7 +18,7 @@ export default function Hero() {
                     
                 </div>
 
-                <figure className="grid items-center overflow-hidden p-2.5">
+                <figure className="grid items-center overflow-hidden p-2.5 ">
                     <img src = {logo} alt="restaurant" className="rounded-card object-cover h-72 w-full "/>
                 </figure>
             </Container>

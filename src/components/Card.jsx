@@ -14,7 +14,7 @@ export default function Card ({src , alt ,title , price}) {
             </div>
 
             <div className="description py-12">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quas laudantium voluptatibus, provident assumenda accusantium corrupti expedita tempore dignissimos facilis similique exercitationem molestiae quaerat esse consequatur, iure voluptatum ullam numquam.</p>
+                <p className="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quas laudantium voluptatibus, provident assumenda accusantium corrupti expedita tempore dignissimos facilis similique exercitationem molestiae quaerat esse consequatur, iure voluptatum ullam numquam.</p>
             </div>
 
             <div className="action my-2.5">
