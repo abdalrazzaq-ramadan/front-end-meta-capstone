@@ -2,7 +2,7 @@ import TestimonialsCard from "../TestimonialsCard.jsx"
 import Container from "../Container.jsx"
 export default function Testimonials () {
     return (
-        <section className="bg-primary py-12">
+        <section id = "testimonials" className="bg-primary py-12">
             <Container>
                 <h1 className="text-subtitle font-heading text-center p-6">Testimonials</h1>
                 

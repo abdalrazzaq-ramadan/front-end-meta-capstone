@@ -1,17 +1,18 @@
 import logo from "../assets/icons_assets/Logo.svg"
 import Container from "./Container"
-export default function Nav () {
+import { Link } from "react-router-dom"
+export default function Nav() {
     return (
         <nav className="p-2.5">
             <Container>
                 <ul className="flex justify-between items-center">
-                    <a><img src={logo} alt="" /></a>
-                    <a>Home</a>
-                    <a>About</a>
-                    <a>Menu</a>
-                    <a>Reservation</a>
-                    <a>Order Online</a>
-                    <a>Login</a>
+                    <Link to="/"><img src={logo} alt="" /></Link>
+                    <Link to="/">Home</Link>
+                    <Link to="/#about">About</Link>
+                    <Link to="/#specials">Menu</Link>
+                    <Link to="/booking">Reservation</Link>
+                    <Link to="">Order Online</Link>
+                    <Link to="">Login</Link>
                 </ul>
             </Container>
         </nav>

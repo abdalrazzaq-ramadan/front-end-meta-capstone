@@ -6,7 +6,7 @@ import Container from "../Container.jsx";
 import Button from "../Button.jsx";
 export default function SpecialsCards () {
     return (
-        <section className="my-6">
+        <section id = "specials" className="my-6">
             <Container className="">
 
                 <div className="flex justify-between py-2 ">

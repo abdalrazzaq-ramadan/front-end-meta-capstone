@@ -3,7 +3,7 @@ import Restaurant from "../../assets/icons_assets/restaurant.jpg"
 import RestaurantChef from "../../assets/icons_assets/restaurant_chef_B.jpg"
 export default function About () {
     return (
-        <section className="my-8 h-72">
+        <section id = "#about" className="my-12 h-96">
             <Container className="grid grid-cols-2 gap-16">
                 <div className="content">
                     <h1 className="text-subtitle font-heading text-primary">Little Lemon</h1>
