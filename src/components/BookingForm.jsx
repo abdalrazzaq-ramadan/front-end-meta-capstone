@@ -9,6 +9,19 @@ const BookingForm = ({ times=[], dispatch , submitForm }) => {
         occasion: "Anniversary",
     });
 
+    const isFormValid =
+        reservation.date !== "" &&
+        reservation.time !== "" &&
+        Number.isInteger(Number(reservation.visitorsNumber)) &&
+        Number(reservation.visitorsNumber) >= 1 &&
+        Number(reservation.visitorsNumber) <= 10 &&
+        reservation.occasion !== "";
+
+    function validateForm () {
+        
+    }
+
+
     function handelChange(e) {
         const { name, value } = e.target
         setReservation((prev) => ({ ...prev, [name]: value }))
@@ -24,6 +37,10 @@ const BookingForm = ({ times=[], dispatch , submitForm }) => {
 
     function handelSubmit (e) {
         e.preventDefault()
+
+        if (!isFormValid) {
+            return;
+        }
 
         const formData = reservation ;
         
@@ -56,6 +73,7 @@ const BookingForm = ({ times=[], dispatch , submitForm }) => {
                     value={reservation.time}
                     onChange={handelChange}
                     className="bg-primary p-2 rounded-button text-white">
+                        <option value="">Select a time</option>
                     {times.map((time,index) => (
                         <option value={time} key={index}>{time}</option>
                     ))}
@@ -67,6 +85,7 @@ const BookingForm = ({ times=[], dispatch , submitForm }) => {
                     placeholder="1"
                     min="1"
                     max="10"
+                    step="1"
                     id="guests"
                     required
                     value={reservation.visitorsNumber}
@@ -84,7 +103,7 @@ const BookingForm = ({ times=[], dispatch , submitForm }) => {
                     <option>Anniversary</option>
                 </select>
 
-                <Button>Make yor reservation</Button>
+                <Button disabled={!isFormValid} type={"submit"}> {isFormValid?"Make your reservation": "Fill your reservation"}</Button>
             </form>
         </div>
     )

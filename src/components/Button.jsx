@@ -1,6 +1,6 @@
-const Button = ({children}) => {
+const Button = ({children , disabled , type}) => {
     return(
-        <button className="bg-secondary rounded-button cursor-pointer p-2">{children}</button>
+        <button type = {type} disabled = {disabled} className="bg-secondary rounded-button cursor-pointer p-2">{children}</button>
     )
 }
 
