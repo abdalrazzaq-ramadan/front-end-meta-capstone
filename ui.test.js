@@ -104,12 +104,12 @@ test("submit button is enabled when the form is valid", async () => {
     );
 
     await user.type(
-        screen.getByLabelText(/date/i),
+        screen.getByLabelText(/Choose date/i),
         "2026-10-20"
     );
 
     await user.selectOptions(
-        screen.getByLabelText(/time/i),
+        screen.getByLabelText(/Choose time/i),
         "17:00"
     );
 
