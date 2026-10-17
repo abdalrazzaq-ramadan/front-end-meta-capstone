@@ -18,7 +18,7 @@ export default function Hero() {
                     
                 </div>
 
-                <figure className="grid items-center overflow-hidden p-2.5 ">
+                <figure className="grid items-center overflow-hidden p-2.5 transition-all hover:scale-120 cursor-pointer">
                     <img src = {logo} alt="restaurant" className="rounded-card object-cover h-72 w-full "/>
                 </figure>
             </Container>

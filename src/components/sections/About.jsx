@@ -12,8 +12,8 @@ export default function About () {
                 </div>
 
                 <figure className="relative">
-                    <img src={Restaurant} alt="Restaurant" className="object-cover absolute top-24 left-48 w-60 h-72 rounded-card" />
-                    <img src={RestaurantChef} alt="Restaurant" className="object-cover absolute w-60 h-72 right-12 top-2.5 z-10 rounded-card" />
+                    <img src={Restaurant} alt="Restaurant" className="object-cover absolute top-24 left-48 w-60 h-72 rounded-card shadow-black shadow-xl transition-all hover:scale-105 hover:left-24" />
+                    <img src={RestaurantChef} alt="Restaurant" className="object-cover absolute w-60 h-72 right-12 top-2.5 z-10 rounded-card shadow-black shadow-xl transition-all hover:scale-105 hover:right-0" />
                 </figure>
             </Container>
         </section>

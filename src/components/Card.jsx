@@ -2,7 +2,7 @@ import Button from "./Button"
 
 export default function Card ({src , alt ,title , price}) {
     return (
-    <div className="w-full rounded-card overflow-hidden bg-[#EDEFEE] ">
+    <div className="w-full rounded-card overflow-hidden bg-[#EDEFEE] shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all hover:shadow-primary hover:scale-105">
         <figure className="w-full h-52">
             <img className="w-full h-full object-cover" src={src} alt={alt} />
         </figure>
