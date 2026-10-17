@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-const BookingForm = ({ times=[], dispatch }) => {
+import { submitAPI } from "../api";
+const BookingForm = ({ times=[], dispatch , submitForm }) => {
     const [reservation, setReservation] = useState({
         date: "",
         time: "",
@@ -21,6 +22,14 @@ const BookingForm = ({ times=[], dispatch }) => {
         dispatch({ type: "changed", date: selectedDate })
     }
 
+    function handelSubmit (e) {
+        e.preventDefault()
+
+        const formData = reservation ;
+        
+        submitForm(formData)
+    }
+
     useEffect(() => {
         console.log(reservation);
     }, [reservation])
@@ -29,7 +38,7 @@ const BookingForm = ({ times=[], dispatch }) => {
     return (
         <div id="booking-form" className="p-6 ">
             <h1 className="text-subtitle font-heading text-primary mx-auto">Book now</h1>
-            <form className="grid max-w-72 gap-5 mx-auto bg-surface p-6 rounded-card">
+            <form onSubmit={handelSubmit} className="grid max-w-72 gap-5 mx-auto bg-surface p-6 rounded-card">
 
                 <label htmlFor="res-date" className="">Choose date</label>
                 <input type="date"
@@ -47,8 +56,8 @@ const BookingForm = ({ times=[], dispatch }) => {
                     value={reservation.time}
                     onChange={handelChange}
                     className="bg-primary p-2 rounded-button text-white">
-                    {times.map((time) => (
-                        <option value={time} key={time}>{time}</option>
+                    {times.map((time,index) => (
+                        <option value={time} key={index}>{time}</option>
                     ))}
                 </select>
 
